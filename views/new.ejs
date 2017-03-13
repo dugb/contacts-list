@@ -1,0 +1,41 @@
+<% include ./partials/header %>
+<div class="ui main text container segment">
+  <div class="ui huge header">New Contact</div>
+
+  <form class="ui form" action="/contacts" method="POST">
+    <div class="field ">
+      <label>First Name</label>
+      <input type="text" name="contact[firstname]" placeholder="first name">
+    </div>
+    <div class="field ">
+      <label>Last Name</label>
+      <input type="text" name="contact[lastname]" placeholder="last name">
+    </div>
+    <div class="field ">
+      <label>Home Phone</label>
+      <input type="text" name="contact[phonehome]" placeholder="home phone">
+    </div>
+    <div class="field ">
+      <label>Cell Phone</label>
+      <input type="text" name="contact[phonecell]" placeholder="cell phone">
+    </div>
+    <div class="field ">
+      <label>Work Phone</label>
+      <input type="text" name="contact[workcell]" placeholder="work phone">
+    </div>
+    <div class="field ">
+      <label>Primary Email</label>
+      <input type="text" name="contact[emailprimary]" placeholder="primary email">
+    </div>
+    <div class="field ">
+      <label>Secondary Email</label>
+      <input type="text" name="contact[emailsecondary]" placeholder="secondary email">
+    </div>
+    <div class="field ">
+      <label>Note (html tags ok)</label>
+      <textarea name="contact[note]"></textarea>
+    </div>
+      <input class="ui big green basic button" type="submit">
+  </form>
+</div>
+<% include ./partials/footer %>

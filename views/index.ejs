@@ -1,0 +1,20 @@
+<% include ./partials/header %>
+<div class="ui main text container">
+  <div class="ui huge header">Contacts List</div>
+  <div class="ui top attached segment">
+    <div class="ui divided items">
+      <% contacts.forEach(function(contact){ %>
+        <div class="item">
+          <a href="/contacts/<%= contact._id %>"><%= contact.lastname %>, <%= contact.firstname %></a>
+        </div>
+            <div class="content">Cell Phone:
+              <span style="margin-left: 10px"><%= contact.phonecell %></span>
+            </div>
+            <div class="content">Primary Email:
+              <span style="margin-left: 10px"><%= contact.emailprimary %></span>
+            </div>
+      <%})%>
+    </div>
+  </div>
+</div>
+<% include ./partials/footer %>

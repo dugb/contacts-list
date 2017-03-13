@@ -1,0 +1,33 @@
+<% include ./partials/header %>
+<div class="ui main text container segment">
+  <div class="ui huge header"><%= contact.lastname %>, <%= contact.firstname %></div>
+  <div class="ui top attached">
+    <div class="item">
+      <div class="content">Home Phone:
+        <span style="margin-left: 10px"><%= contact.phonehome %></span>
+      </div>
+      <div class="content">Cell Phone:
+        <span style="margin-left: 10px"><%= contact.phonecell %></span>
+      </div>
+      <div class="content">Work Phone:
+        <span style="margin-left: 10px"><%= contact.phonework %></span>
+      </div>
+      <div class="content">Primary Email:
+        <span style="margin-left: 10px"><%= contact.emailprimary %></span>
+      </div>
+      <div class="content">Secondary Email:
+        <span style="margin-left: 10px"><%= contact.emailsecondary %></span>
+      </div>
+      <div class="content">Note:
+        <span style="margin-left: 10px"><%= contact.note %></span>
+      </div>
+    </div>
+  </div>
+
+  <a class="ui orange basic button" href="/contacts/<%= contact._id %>/edit">Edit</a>
+  <form id="delete" action="/contacts/<%= contact._id %>?_method=DELETE" method="POST">
+    <button class="ui red basic button">Delete</button>
+  </form>
+
+</div>
+<% include ./partials/footer %>
